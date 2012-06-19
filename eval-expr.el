@@ -244,6 +244,8 @@ Value is also consed on to front of the variable `values'."
               (setq i (1+ i)))
 
             (setq retry nil))
+        (quit
+         (setq retry nil))
 	(error
          (eval-expr-error-message err-data t))))
     expr))
